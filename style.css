@@ -1,0 +1,111 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    gap: 30px;
+    background-color: #1d2b3a;
+}
+
+::selection{
+  background-color: aqua;
+  color: rgb(255, 0, 0);
+}
+
+.main{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 25px;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif0;
+ }
+
+ #animation-paragraf{
+    color: aliceblue;
+ }
+
+
+  #animation-paragraf::before{
+    content: "";
+    display: block;
+    background-color: rgb(0, 243, 166);
+    width: 100%;
+    height: 4px;
+    transform: scale(0);
+    transform: translate(0px,0px);
+    transition: all 0.5s ease;
+  }
+
+  #animation-paragraf::after{
+    display: block;
+    content: "";
+    background-color: rgb(0, 243, 166);
+    width: 100%;
+    height: 4px;
+    transform: scale(0);
+    transform: translate(0px,0px);
+    transition: all 0.5s ease;
+  }
+
+  #animation-paragraf:hover::after{
+    
+    transform: scale(1);
+    transform: translate(0px,-30px);
+    transition: all 0.5s ease;
+  
+  }
+
+  #animation-paragraf:hover::before{
+    transform: scale(1);
+    transform: translate(0px,30px);
+    transition: all 0.5s ease;  
+  }
+
+  .inputBox{
+    position: relative;
+    width: 250px;
+  }
+  .inputBox input{
+    width: 100%;
+    padding: 10px;
+    border: solid 1px  rgba(255, 255, 255, 0.25);
+    background: #1d2b3a;
+    border-radius: 5px;
+    outline: none;
+    color: #fff;
+    font-size: 1em;
+    transition: 0.5s;
+  }
+
+  .inputBox span{
+    position: absolute;
+    left: 0;
+    padding: 10px;
+    color: rgba(255, 255, 255, 0.25);
+    font-size: 1em;
+    text-transform: uppercase;
+    transition: 0.5s;
+  }
+
+.inputBox input:focus ~ span,
+.inputBox input:valid ~ span
+  {
+    transform: translateX(10px) translateY(-7px);
+    background-color: #1d2b3a;
+    color: #00dfc4;
+    font-size: 0.65em;
+    padding: 0 10px;
+    border-left: 1px solid rgba(0,243,166);
+    border-right: 1px solid rgba(0,243,166);
+    letter-spacing: 0.2em;
+  }
+  .inputBox input:focus,
+  .inputBox input:valid{
+    border-color: #00dfc4;
+  }
