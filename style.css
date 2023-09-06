@@ -17,6 +17,17 @@ body{
   background-color: aqua;
   color: rgb(255, 0, 0);
 }
+.container{
+  border:2px solid rgb(0, 247, 255);
+  border-radius: 44px;
+	width:400px;
+	height:500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 30px;
+}
 
 .main{
   display: flex;
@@ -109,4 +120,22 @@ body{
   .inputBox input:focus,
   .inputBox input:valid{
     border-color: #00dfc4;
+  }
+  .buttons{
+    margin-left: 5px;
+    width: 90%;
+    height: 35px;
+    border-radius: 80px;
+  }
+  .buttons :nth-child(1){
+    width: 50%;
+    height: 35px;
+    padding: 5px 10px;
+    border-radius: 30px;
+  }
+  .buttons :nth-child(2){
+    width: 48%;
+    height: 35px;
+    padding: 5px 10px;
+    border-radius: 30px;
   }
